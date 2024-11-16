@@ -10,11 +10,32 @@ import UIKit
 
 class ViewController: UIViewController {
 
+	// --- MARK: - Outlets ---
+	@IBOutlet weak var heightLabel: UILabel!
+	
+	@IBOutlet weak var weightLabel: UILabel!
+	
+	// --- MARK: - ViewController ---
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
-
+	// --- MARK: - Actions ---
+	@IBAction func heightSliderChanged(_ sender: UISlider) {
+		let height = String(format: "%.2f", sender.value)
+		heightLabel.text = "\(height)m"
+	}
+	
+	@IBAction func weightSliderChanged(_ sender: UISlider) {
+		let weight = String(format: "%.0f", sender.value)
+		weightLabel.text = "\(weight)kg"
+	}
+	
+	// --- MARK: - private functions ---
+	private func roundValue(_ value: Float) -> String {
+		let roundedValue = String(format: "%.2f", value)
+		return roundedValue
+	}
 }
 
