@@ -208,7 +208,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="adviseLabel" destination="9IV-CT-mxw" id="eYl-cQ-jdU"/>
+                        <outlet property="adviceLabel" destination="9IV-CT-mxw" id="eYl-cQ-jdU"/>
                         <outlet property="bmiLabel" destination="VU9-2W-Sd5" id="NDg-2R-I1y"/>
                     </connections>
                 </viewController>
